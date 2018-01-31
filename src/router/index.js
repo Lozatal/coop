@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Connexion from '@/components/identification/Connexion'
+import Connexion from '@/components/Identification/Connexion'
 import MembreListe from '@/components/Membre/MembreListe'
 import MembreCreation from '@/components/Membre/MembreCreation'
 import ConversationListe from '@/components/Conversation/ConversationListe'

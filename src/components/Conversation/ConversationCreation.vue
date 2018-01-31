@@ -16,7 +16,7 @@
 export default {
   name: 'ConversationCreation',
   components:{
-    
+
   },
   data () {
   	return {
@@ -37,9 +37,10 @@ export default {
 				    });
   	}
   }
-}	
+}
 
 </script>
 
 <style scoped>
+
 </style>

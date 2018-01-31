@@ -3,7 +3,6 @@
     <input type='email' v-model="email" placeholder="email">
     <input type='password' v-model="password" placeholder="password">
     <input type="submit" value="Connexion">
-
     <router-link to="/membre-creation">Créer un compte</router-link>
   </form>
 </template>
@@ -39,4 +38,30 @@ export default {
 </script>
 
 <style scoped>
+form{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width:50%;
+  box-sizing: border-box;
+  padding: 2em;
+  background-color: black;
+  border-radius: 20px;
+}
+input{
+  width: 100%;
+  box-sizing: border-box;
+  margin: auto;
+  text-align: center;
+}
+input:nth-child(3){
+  margin-top: 1em;
+}
+a{
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  margin-top: 1em;
+}
 </style>

@@ -1,8 +1,7 @@
 <template>
-	<div>
+	<div id="corps">
     <navBar></navBar>
 		<router-link to="/conversation-creation">Créer une conversation</router-link>
-    <hr>
     <conversation v-for="conversation in conversations" :conversation="conversation" :key="conversation._id"></conversation>
 	</div>
 </template>
@@ -35,4 +34,18 @@ export default {
 </script>
 
 <style scoped>
+	#corps{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+	a{
+		width: 100%;
+		text-align: center;
+		text-decoration: none;
+		color: black;
+		padding: 0;
+	}
 </style>

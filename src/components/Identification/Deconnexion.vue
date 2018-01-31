@@ -1,7 +1,5 @@
 <template>
-	<div>
 		<button @click="seDeconnecter">Deconnexion</button>
-	</div>
 </template>
 
 <script>
@@ -20,4 +18,5 @@ export default {
 </script>
 
 <style scoped>
+
 </style>

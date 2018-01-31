@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div id="listeMessage">
 		<item v-for="item in items" :item="item" :key="item._id"></item>
 	</div>
 </template>
@@ -40,4 +40,5 @@ export default {
 </script
 
 <style scoped>
+
 </style>

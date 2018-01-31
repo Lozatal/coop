@@ -1,18 +1,12 @@
 <template>
-  <div>
+  <div id="corps">
     <navBar></navBar>
-    <h2>Conversation</h2>
-    <label>Titre :</label>
-    <span>{{ conversation.label }}</span>
-    <br>
-    <label>Description :</label>
-    <span>{{ conversation.topic }}</span>
-    <hr>
-    <h2>liste des messages</h2>
-    <messageListe></messageListe>
-    <hr>
-    <h2>Ajouter un message</h2>
-    <messageCreation></messageCreation>
+    <div id="conversationDetail">
+      <h2>{{ conversation.label }}</h2>
+      <p>{{ conversation.topic }}</p>
+      <div id="messages"><messageListe></messageListe></div>
+      <messageCreation></messageCreation>
+    </div>
   </div>
 </template>
 
@@ -47,7 +41,29 @@ export default {
 </script>
 
 <style scoped>
-h2 {
-  font-weight: bold;
+#corps{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+#conversationDetail{
+  width: 90%;
+  padding: 1em;
+  margin: auto;
+  background-color: #ADD8E6;
+  margin-top: 1em;
+  border-radius: 0px 20px 0px 0px;
+}
+
+h2{
+  width: 100%;
+  text-align: center;
+}
+
+#messages{
+  border: 1px solid black;
+  padding: 1em;
 }
 </style>
