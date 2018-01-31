@@ -1,11 +1,9 @@
 <template>
-  <router-link :to="{ name : 'conversation', params : {id:conversation._id}}">
     <div>
-      <h3>{{ conversation.label }}</h3>
+      <router-link :to="{ name : 'conversation', params : {id:conversation._id}}"><h3>{{ conversation.label }}</h3></router-link>
       <span>{{ conversation.topic }}</span>
       <button @click="supprimerConversation">Supprimer</button>
     </div>
-  </router-link>
 </template>
 
 <script>
@@ -34,16 +32,30 @@ export default {
   	-moz-transition-duration: 1s;
   	transition-property: border-radius;
   	transition-duration: 1s;
+    margin-left: 2%;
+    width: 22.5%;
+    text-align: center;
   }
   div:hover{
     border-radius: 20px 20px 20px 20px;
   }
   a{
-    width: 22.5%;
     color: black;
     text-decoration: none;
     box-sizing: border-box;
-    margin-left: 2%;
-
+    text-align: center;
+    -webkit-transition-property: color;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: color;
+    -moz-transition-duration: 1s;
+    transition-property: color;
+    transition-duration: 1s;
+  }
+  a:hover{
+    color:red;
+  }
+  button{
+    width: 100%;
+    margin-top: 1em;
   }
 </style>
