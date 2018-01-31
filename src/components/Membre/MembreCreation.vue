@@ -27,7 +27,7 @@ export default {
       }).then((response) => {
         this.$router.push({path: '/connexion'});
       }).catch((error) => {
-        alert(error.response.data.error);
+        alert(error);
       });
     }
   }

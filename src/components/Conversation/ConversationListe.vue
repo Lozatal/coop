@@ -27,7 +27,7 @@ export default {
               //alert('toto');
               this.conversations = response.data
             }).catch((error) => {
-                alert(error.response.data.error);
+               // alert(error.response.data.error);
             });
   }
 }
