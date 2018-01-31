@@ -2,11 +2,9 @@
 	<div>
       <label>Email :</label>
       <span>{{ membre.email }}</span>
-      <br>
       <label>Nom complet :</label>
       <span>{{ membre.fullname }}</span>
       <button v-if= "differentUtil === 'yes'" @click="supprimerMembre">Supprimer</button>
-      <hr>
 	</div>
 </template>
 
@@ -39,4 +37,21 @@ export default {
 </script>
 
 <style scoped>
+	div{
+		display: flex;
+		flex-wrap: wrap;
+		background-color: #ADD8E6;
+		width: 22.5%;
+		height: 60px;
+		margin-left: 2%;
+		margin-top: 1em;
+		border-radius: 0px 20px 0px 0px;
+	}
+	button{
+		width: 100%;
+		margin: auto;
+	}
+	label{
+		font-weight: bold;
+	}
 </style>

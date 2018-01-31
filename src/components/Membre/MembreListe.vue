@@ -1,8 +1,9 @@
 <template>
-	<div>
+	<div id="corps">
 		<navBar></navBar>
-		<br>
-		<membre v-for="membre in membres" :membre="membre" :key="membre._id"></membre>
+		<div id="listeMembre">
+			<membre v-for="membre in membres" :membre="membre" :key="membre._id"></membre>
+		</div>
 	</div>
 </template>
 
@@ -33,4 +34,16 @@ export default {
 </script>
 
 <style scoped>
+#corps{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+#listeMembre{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
 </style>

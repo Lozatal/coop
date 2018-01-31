@@ -42,7 +42,7 @@ form{
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  width:50%;
+  width: 50%;
   box-sizing: border-box;
   padding: 2em;
   background-color: black;
