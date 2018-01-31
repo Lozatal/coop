@@ -36,7 +36,6 @@ export default {
 	},
   mounted(){
     window.axios.get('channels/' + this.$route.params.id).then((response) => {
-      //alert('toto');
       this.conversation = response.data
     }).catch((error) => {
         alert(error.response.data.error);

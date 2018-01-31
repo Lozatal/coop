@@ -24,7 +24,6 @@ export default {
 	},
   	mounted () {
 	    window.axios.get('members').then((response) => {
-	              //alert('toto');
 	              this.membres = response.data
 	            }).catch((error) => {
 	                alert(error.response.data.error);
