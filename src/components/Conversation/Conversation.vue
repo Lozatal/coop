@@ -15,6 +15,18 @@ export default {
   	return {
 
   	}
+  },
+  methods : {
+    supprimerConversation() {
+      window.axios.delete('channels/' + this.conversation._id, {
+      }).then((response) => {
+        //this.$router.push({ path: '/conversation' });
+        //location.reload();
+        window.bus.$emit('chargeConversation');
+      }).catch((error) => {
+        alert(error);
+      });
+    }
   }
 }
 </script>
