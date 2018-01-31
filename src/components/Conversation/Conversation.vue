@@ -3,6 +3,7 @@
     <div>
       <h3>{{ conversation.label }}</h3>
       <span>{{ conversation.topic }}</span>
+      <button @click="supprimerConversation">Supprimer</button>
     </div>
   </router-link>
 </template>
