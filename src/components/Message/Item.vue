@@ -2,6 +2,7 @@
 	<div>
       <label>{{ member.fullname }} :</label>
       <span>{{ item.message }}</span>
+      <button v-if= "messageUtil === 1" @click="supprimerMessage">Supprimer</button>
       <br><br>
 	</div>
 </template>
@@ -14,7 +15,8 @@ export default {
   data () {
   	return {
       members : [],
-      member : ''
+      member : '',
+      messageUtil : 0
   	}
   },
   methods : {
@@ -33,6 +35,9 @@ export default {
     window.axios.get('members').then((response) => {
       this.members = response.data;
       this.trouveMembre();
+      if(this.member.token === this.$store.state.token){
+        this.messageUtil = 1;
+      }
     }).catch((error) => {
       alert(error.response.data.error);
     });
