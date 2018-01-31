@@ -1,14 +1,10 @@
 <template>
-	<div id="ConversationCreation">
 		<form @submit="Enregistrer">
 		    <input type='text' v-model="label" placeholder="titre">
-		    <br>
-		    <textarea v-model="topic" placeholder="description"></textarea>
-		    <br>
+		    <input type="text" v-model="topic" placeholder="description">
 		    <input type="submit" value="Enregistrer">
     		<router-link to="/conversation">Retour</router-link>
   		</form>
-	</div>
 </template>
 
 <script>
@@ -42,5 +38,31 @@ export default {
 </script>
 
 <style scoped>
-
+form{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width:50%;
+  box-sizing: border-box;
+  padding: 2em;
+  background-color: black;
+  border-radius: 20px;
+  margin-top: 250px;
+}
+input{
+  width: 100%;
+  box-sizing: border-box;
+  margin: auto;
+  text-align: center;
+}
+input:nth-child(3){
+  margin-top: 1em;
+}
+a{
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  margin-top: 1em;
+}
 </style>
