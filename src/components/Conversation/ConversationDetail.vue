@@ -32,7 +32,7 @@ export default {
     window.axios.get('channels/' + this.$route.params.id).then((response) => {
       this.conversation = response.data
     }).catch((error) => {
-        alert(error.response.data.error);
+        alert(error);
     });
 
   }

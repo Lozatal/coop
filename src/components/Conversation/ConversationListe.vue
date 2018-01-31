@@ -22,13 +22,23 @@ export default {
       conversations:[]
   	}
   },
+  methods: {
+    chargeConversation(){
+      window.axios.get('channels').then((response) => {
+          this.conversations = response.data
+        }).catch((error) => {
+           // alert(error.response.data.error);
+        });
+
+    }
+  },
   mounted () {
-    window.axios.get('channels').then((response) => {
-              //alert('toto');
-              this.conversations = response.data
-            }).catch((error) => {
-               // alert(error.response.data.error);
-            });
+    this.chargeConversation();
+
+    window.bus.$on('chargeConversation', () => {
+        this.chargeConversation();
+    })
+
   }
 }
 </script>
