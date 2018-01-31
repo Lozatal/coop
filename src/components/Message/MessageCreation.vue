@@ -1,11 +1,8 @@
 <template>
-	<div>
 		<form @submit="Enregistrer">
-		    <textarea v-model="message" placeholder="message"></textarea>
-		    <br>
+		    <input type="text" v-model="message" placeholder="message">
 		    <input type="submit" value="Enregistrer">
   		</form>
-	</div>
 </template>
 
 <script>
@@ -30,7 +27,26 @@ export default {
 	}
 }
 
-</script
+</script>
 
 <style scoped>
+form{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+input{
+  width: 90%;
+  box-sizing: border-box;
+  margin: auto;
+  text-align: left;
+}
+input:nth-child(2){
+  width: 10%;
+  box-sizing: border-box;
+  margin: auto;
+  text-align: center;
+}
 </style>
