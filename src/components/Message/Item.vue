@@ -2,8 +2,7 @@
 	<div>
       <label>{{ member.fullname }} :</label>
       <span>{{ item.message }}</span>
-      <button v-if= "messageUtil === 1" @click="supprimerMessage">Supprimer</button>
-      <br><br>
+      <button v-if= "messageUtil === 1" @click="supprimerMessage">X</button>
 	</div>
 </template>
 
@@ -46,4 +45,25 @@ export default {
 </script>
 
 <style scoped>
+	div{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	label{
+		width: 5%;
+		height: 30px;
+		box-sizing: border-box;
+	}
+	span{
+		width: 90%;
+		height: 30px;
+		box-sizing: border-box;
+	}
+	button{
+		width: 5%;
+		height: 30px;
+		box-sizing: border-box;
+	}
 </style>
