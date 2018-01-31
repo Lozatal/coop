@@ -16,13 +16,17 @@ export default {
 	},
 	methods : {
 		Enregistrer(){
-			window.axios.post('channels/' + this.$route.params.id + '/posts', {
-		        message : this.message
-		    }).catch((error) => {
-		        alert(error.response.data.error);
-		    });
+			if(this.message != '') {
+				window.axios.post('channels/' + this.$route.params.id + '/posts', {
+			        message : this.message
+			    }).then((response) => {
+			    	this.message = '';
+			    }).catch((error) => {
+			        alert(error.response.data.error);
+			    });
 
-			window.bus.$emit('chargeMessage');
+				window.bus.$emit('chargeMessage');
+			}
   		}
 	}
 }

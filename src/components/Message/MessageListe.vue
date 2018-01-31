@@ -21,7 +21,6 @@ export default {
 	methods: {
 		chargeMessage(){
 			window.axios.get('channels/' + this.$route.params.id + '/posts').then((response) => {
-		      //alert(response.data);
 		      this.items = response.data
 		    }).catch((error) => {
 		        alert(error.response.data.error);
