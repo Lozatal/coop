@@ -44,6 +44,7 @@ form{
   padding: 2em;
   background-color: black;
   border-radius: 20px;
+  margin-top: 250px;
 }
 input{
   width: 100%;

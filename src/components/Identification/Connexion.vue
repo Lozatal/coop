@@ -42,6 +42,7 @@ form{
   display: flex;
   flex-wrap: wrap;
   margin: auto;
+  margin-top: 250px;
   width: 50%;
   box-sizing: border-box;
   padding: 2em;
