@@ -29,6 +29,14 @@ export default {
         }
       });
       this.member = membreTrouve;
+    },
+    supprimerMessage() {
+      window.axios.delete('channels/' + this.$route.params.id + '/posts/' + this.item._id, {
+      }).then((response) => {
+        location.reload();
+      }).catch((error) => {
+        alert(error.response.data.error);
+      });
     }
   },
   mounted () {
